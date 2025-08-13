@@ -7,6 +7,7 @@ import HomePagewrapper from "../pages/HomePagewrapper";
 import NewsDetailPageWrapper from "../pages/NewsDetailPageWrapper";
 import WalletPageWrapper from "../pages/WalletPageWrapper";
 import AnalyticPageWrapper from "../pages/AnalyticPageWrapper";
+import PartnerPageWrapper from "../pages/PartnerPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes: React.FC = () => {
             <Route path="/news/:id" element={<NewsDetailPageWrapper />} />
             <Route path="/wallet" element={<WalletPageWrapper />} />
             <Route path="/analytics" element={<AnalyticPageWrapper />} />
+            <Route path="/partner" element={<PartnerPageWrapper />} />
           </Route>
         </Route>
       </Routes>
