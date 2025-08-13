@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Download, Gift, Plus, Send, Users } from "lucide-react";
-import { IconButton } from "./IconButton";
 import { Card } from "../../../../components/Card";
+import { IconButton } from "../../../../components/IconButton";
 
 const BalancePanel = () => {
   const balance = 4.2025;
