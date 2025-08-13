@@ -4,6 +4,7 @@ import App from "../App";
 import PrivateRoutes from "./PrivateRoutes";
 import LoginWrapper from "../pages/LoginWrapper";
 import HomePagewrapper from "../pages/HomePagewrapper";
+import NewsDetailPageWrapper from "../pages/NewsDetailPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes: React.FC = () => {
             <Route path="home" element={<HomePagewrapper />} />
             {/* catch-all */}
             <Route path="*" element={<Navigate to="/home" replace />} />
+            <Route path="/news/:id" element={<NewsDetailPageWrapper />} />
           </Route>
         </Route>
       </Routes>

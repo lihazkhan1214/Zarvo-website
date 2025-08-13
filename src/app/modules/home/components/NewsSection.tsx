@@ -105,12 +105,7 @@ export const NewsSection: React.FC = () => {
       <h2 className="text-xl font-semibold text-[#F5F7FA]">News</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map((n) => (
-          <NewsCard
-            key={n.id}
-            item={n}
-            onOpen={() => setFocusedId(n.id)}
-            onLike={() => like(n.id)}
-          />
+          <NewsCard key={n.id} item={n} onLike={() => like(n.id)} />
         ))}
       </div>
     </>
