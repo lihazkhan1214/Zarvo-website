@@ -1,5 +1,3 @@
-import React from "react";
-
 function LoginWrapper() {
   return <div>Login</div>;
 }

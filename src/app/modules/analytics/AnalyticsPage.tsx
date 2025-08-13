@@ -86,7 +86,6 @@ const PillTabs: React.FC<{
 /* ---------- Page ---------- */
 const AnalyticsPage: React.FC = () => {
   const [range, setRange] = useState<RangeKey>("24h");
-  const [loading, setLoading] = useState(true);
   const [total, setTotal] = useState(0);
   const [pctChange, setPctChange] = useState(0);
   const [series, setSeries] = useState<Point[]>([]);
@@ -97,7 +96,6 @@ const AnalyticsPage: React.FC = () => {
   useEffect(() => {
     let mounted = true;
     const load = async () => {
-      setLoading(true);
       const data = await fetchAnalytics(range);
       if (!mounted) return;
       setTotal(data.total);
@@ -106,7 +104,6 @@ const AnalyticsPage: React.FC = () => {
       setSupply(data.supply);
       setBurns(data.burns);
       setRates(data.rates);
-      setLoading(false);
     };
     load();
     const id = setInterval(load, 30_000); // refresh every 30s

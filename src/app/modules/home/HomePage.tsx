@@ -1,4 +1,3 @@
-import React from "react";
 // import BalancePanel from "./components/BalancePanel";
 // import InviteSlider from "./components/InviteSlider";
 import DownloadCta from "./components/DownloadCta";

@@ -1,5 +1,4 @@
-import { useMemo, useState } from "react";
-import { Heart, Share2 } from "lucide-react";
+import { useState } from "react";
 import { NewsCard } from "./NewCard";
 
 type NewsItem = {
@@ -89,11 +88,11 @@ const INITIAL_NEWS: NewsItem[] = [
 
 export const NewsSection: React.FC = () => {
   const [items, setItems] = useState<NewsItem[]>(INITIAL_NEWS);
-  const [focusedId, setFocusedId] = useState<string | null>(INITIAL_NEWS[1].id);
-  const focused = useMemo(
-    () => items.find((n) => n.id === focusedId) ?? items[0],
-    [items, focusedId]
-  );
+  // const [focusedId, setFocusedId] = useState<string | null>(INITIAL_NEWS[1].id);
+  // const focused = useMemo(
+  //   () => items.find((n) => n.id === focusedId) ?? items[0],
+  //   [items, focusedId]
+  // );
   const like = (id: string) =>
     setItems((arr) =>
       arr.map((n) => (n.id === id ? { ...n, likes: n.likes + 1 } : n))
