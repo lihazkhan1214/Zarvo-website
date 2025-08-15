@@ -9,6 +9,9 @@ import WalletPageWrapper from "../pages/WalletPageWrapper";
 import AnalyticPageWrapper from "../pages/AnalyticPageWrapper";
 import PartnerPageWrapper from "../pages/PartnerPageWrapper";
 import RecievePagewrapper from "../pages/RecievePagewrapper";
+import SendPageWrapper from "../pages/SendPageWrapper";
+import RedeemPageWrapper from "../pages/RedeemPageWrapper";
+import TransactionPageWrapper from "../pages/TransactionPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -30,6 +33,9 @@ const AppRoutes: React.FC = () => {
             <Route path="/analytics" element={<AnalyticPageWrapper />} />
             <Route path="/partner" element={<PartnerPageWrapper />} />
             <Route path="/recieve" element={<RecievePagewrapper />} />
+            <Route path="/send" element={<SendPageWrapper />} />
+            <Route path="/redeem" element={<RedeemPageWrapper />} />
+            <Route path="/history" element={<TransactionPageWrapper />} />
           </Route>
         </Route>
       </Routes>

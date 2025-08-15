@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Download, Gift, Plus, Send, Users } from "lucide-react";
 import { Card } from "../../../../components/Card";
 import { IconButton } from "../../../../components/IconButton";
+import { useNavigate } from "react-router-dom";
 
 const BalancePanel = () => {
   const balance = 4.2025;
@@ -9,6 +10,7 @@ const BalancePanel = () => {
   const invited = 2;
   const invitedCap = 2;
   const [isMining, setIsMining] = useState(false);
+  const navgate = useNavigate();
 
   return (
     <Card className="p-8 flex flex-col items-center  shadow-lg rounded-2xl">
@@ -40,10 +42,21 @@ const BalancePanel = () => {
 
       {/* Action Buttons */}
       <div className="mt-6 flex gap-4 flex-wrap justify-center">
-        <IconButton label="Send" icon={<Send size={18} />} />
-        <IconButton label="Receive" icon={<Download size={18} />} />
+        <IconButton
+          label="Send"
+          icon={<Send size={18} onClick={() => navgate("/send")} />}
+        />
+        <IconButton
+          label="Receive"
+          onClick={() => navgate("/recieve")}
+          icon={<Download size={18} />}
+        />
         <IconButton label="Buy" icon={<Plus size={18} />} />
-        <IconButton label="Redeem" icon={<Gift size={18} />} />
+        <IconButton
+          label="Redeem"
+          onClick={() => navgate("/redeem")}
+          icon={<Gift size={18} />}
+        />
       </div>
     </Card>
   );

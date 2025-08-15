@@ -147,7 +147,7 @@ const PartnerPage: React.FC = () => {
                 </div>
               </div>
               <div className="mt-4">
-                <OfferButton to={`/partners/${p.id}`} />
+                <OfferButton to={`/redeem`} />
               </div>
             </Card>
           ))}
@@ -174,7 +174,7 @@ const PartnerPage: React.FC = () => {
                   <div className="truncate font-semibold">{p.name}</div>
                   <div className="text-sm text-white/60">{p.subtitle}</div>
                 </div>
-                <OfferButton to={`/partners/${p.id}`} />
+                <OfferButton to={`/redeem`} />
               </div>
             </Card>
           ))}

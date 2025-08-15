@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import RateCard from "./components/RateCard";
 import StatRow from "./components/StatRow";
+import Wrapper from "../../../components/Wrapper";
 
 /* ---------- Types ---------- */
 type RangeKey = "24h" | "1D" | "7D" | "30d";
@@ -128,9 +129,9 @@ const AnalyticsPage: React.FC = () => {
   );
 
   return (
-    <main className="min-h-screen bg-[#0F0F15] text-[#F5F7FA]">
+    <Wrapper>
       {/* Header */}
-      <div className="mx-auto w-full max-w-7xl px-6 pt-10 pb-6 flex items-center justify-between">
+      <div className="mx-auto w-full max-w-7xl px-6 flex items-center justify-between">
         <div className="text-xl font-semibold">Analytics</div>
         <div className="text-sm">
           <span className="text-white/60 mr-2">ZRV</span>
@@ -263,7 +264,7 @@ const AnalyticsPage: React.FC = () => {
       </div>
 
       <div className="h-16" />
-    </main>
+    </Wrapper>
   );
 };
 

@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import { Card } from "../../../components/Card";
 import { IconButton } from "../../../components/IconButton";
+import { useNavigate } from "react-router-dom";
+import Wrapper from "../../../components/Wrapper";
 
 type Token = {
   symbol: string;
@@ -26,6 +28,7 @@ const TOKENS: Token[] = [
 
 const WalletPage: React.FC = () => {
   const [tab, setTab] = useState<"tokens" | "nfts">("tokens");
+  const navigate = useNavigate();
 
   const address = "GKE25K";
   const balanceZRV = 2547.89;
@@ -37,9 +40,9 @@ const WalletPage: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#0F0F15] text-[#F5F7FA]">
+    <Wrapper>
       {/* Page header */}
-      <div className="mx-auto w-full max-w-7xl px-6 pt-10 pb-6 flex items-center justify-between">
+      <div className="mx-auto w-full max-w-7xl px-6   flex items-center justify-between">
         <div className="text-xl font-semibold">Wallet</div>
         <div className="flex items-center gap-2">
           <button
@@ -94,9 +97,22 @@ const WalletPage: React.FC = () => {
 
             {/* Actions (IconButton component) */}
             <div className="mt-6 flex flex-wrap gap-3">
-              <IconButton label="Send" icon={<Send size={18} />} />
-              <IconButton label="Receive" icon={<Download size={18} />} />
-              <IconButton label="History" icon={<History size={18} />} />
+              <IconButton
+                label="Send"
+                icon={<Send size={18} onClick={() => navigate("/send")} />}
+              />
+              <IconButton
+                label="Receive"
+                icon={
+                  <Download size={18} onClick={() => navigate("/recieve")} />
+                }
+              />
+              <IconButton
+                label="History"
+                icon={
+                  <History size={18} onClick={() => navigate("/history")} />
+                }
+              />
             </div>
           </div>
         </Card>
@@ -175,7 +191,7 @@ const WalletPage: React.FC = () => {
       )}
 
       <div className="h-16" />
-    </main>
+    </Wrapper>
   );
 };
 
