@@ -46,7 +46,7 @@ const NewsDetailPage: React.FC = () => {
     return (
       <main className="min-h-screen bg-[#0F0F15] text-[#F5F7FA]">
         <header className="mx-auto w-full max-w-6xl px-6 py-6">
-          <BackButton to="/news" />
+          <BackButton />
         </header>
         <div className="mx-auto max-w-6xl px-6 pb-16">
           <div className="rounded-2xl bg-[#15151E] p-8 ring-1 ring-white/10">
