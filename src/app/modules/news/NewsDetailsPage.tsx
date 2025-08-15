@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowLeft, Share2, Heart } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import BackButton from "../../../components/BackButton";
 
 // ---- STATIC CONTENT (ID -> POST) ----
 type Section = { h: string; p: string };
@@ -45,13 +46,7 @@ const NewsDetailPage: React.FC = () => {
     return (
       <main className="min-h-screen bg-[#0F0F15] text-[#F5F7FA]">
         <header className="mx-auto w-full max-w-6xl px-6 py-6">
-          <Link
-            to="/news"
-            className="inline-flex items-center gap-2 rounded-full bg-white/5 hover:bg-white/10 transition px-3 py-2"
-          >
-            <ArrowLeft size={18} />
-            <span className="text-sm">Back</span>
-          </Link>
+          <BackButton to="/news" />
         </header>
         <div className="mx-auto max-w-6xl px-6 pb-16">
           <div className="rounded-2xl bg-[#15151E] p-8 ring-1 ring-white/10">
