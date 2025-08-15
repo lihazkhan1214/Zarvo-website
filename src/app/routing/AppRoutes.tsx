@@ -14,6 +14,7 @@ import RedeemPageWrapper from "../pages/RedeemPageWrapper";
 import TransactionPageWrapper from "../pages/TransactionPageWrapper";
 import NotificationPageWrapper from "../pages/NotificationPageWrapper";
 import RefferalPageWrapper from "../pages/RefferalPageWrapper";
+import RewardPageWrapper from "../pages/RewardPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -40,6 +41,7 @@ const AppRoutes: React.FC = () => {
             <Route path="/history" element={<TransactionPageWrapper />} />
             <Route path="/notification" element={<NotificationPageWrapper />} />
             <Route path="/refferal" element={<RefferalPageWrapper />} />
+            <Route path="/rewards" element={<RewardPageWrapper />} />
           </Route>
         </Route>
       </Routes>
