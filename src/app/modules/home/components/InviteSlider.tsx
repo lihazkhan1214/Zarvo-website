@@ -4,8 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Share2, TrendingUp } from "lucide-react";
 import { Card } from "../../../../components/Card";
+type InviteSliderProps = {
+  bg?: string; // optional string prop
+};
 
-const InviteSlider = () => {
+const InviteSlider: React.FC<InviteSliderProps> = ({ bg }) => {
   const settings = useMemo(
     () => ({
       arrows: false,
@@ -48,7 +51,7 @@ const InviteSlider = () => {
   ];
 
   return (
-    <Card className="p-5">
+    <Card className={`${bg ? `bg-[${bg}]` : ""} p-5 `}>
       <Slider {...settings}>
         {slides.map((s, i) => (
           <div key={i}>
