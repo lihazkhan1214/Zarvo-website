@@ -16,6 +16,13 @@ import NotificationPageWrapper from "../pages/NotificationPageWrapper";
 import RefferalPageWrapper from "../pages/RefferalPageWrapper";
 import RewardPageWrapper from "../pages/RewardPageWrapper";
 import ProfilePageWrapper from "../pages/ProfilePageWrapper";
+import ProfileDetailPagewrapper from "../pages/ProfileDetailPagewrapper";
+import EditProfilePageWrapper from "../pages/EditProfilePageWrapper";
+import ScuritySettingPageWrapper from "../pages/ScuritySettingPageWrapper";
+import LanguageSettingPageWrapper from "../pages/LanguageSettingPageWrapper";
+import NotificationSettingPagewrapper from "../pages/NotificationSettingPagewrapper";
+import KYCStartPageWrapper from "../pages/KYCStartPageWrapper";
+// import KYCSelectDocPageWrapper from "../pages/KYCSelectDocPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -44,6 +51,23 @@ const AppRoutes: React.FC = () => {
             <Route path="/refferal" element={<RefferalPageWrapper />} />
             <Route path="/rewards" element={<RewardPageWrapper />} />
             <Route path="/profile" element={<ProfilePageWrapper />} />
+            <Route path="/profile/:id" element={<ProfileDetailPagewrapper />} />
+            <Route path="/profile/edit" element={<EditProfilePageWrapper />} />
+            <Route
+              path="/profile/language"
+              element={<LanguageSettingPageWrapper />}
+            />
+            <Route
+              path="/profile/security"
+              element={<ScuritySettingPageWrapper />}
+            />
+            <Route
+              path="/profile/notification"
+              element={<NotificationSettingPagewrapper />}
+            />
+            <Route path="/profile/kyc" element={<KYCStartPageWrapper />} />
+
+            {/* <Route path="/dd" element={<KYCSelectDocPageWrapper />} /> */}
           </Route>
         </Route>
       </Routes>

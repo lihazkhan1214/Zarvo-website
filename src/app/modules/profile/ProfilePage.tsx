@@ -9,6 +9,7 @@ import {
   Globe,
   LogOut,
   Copy,
+  ChevronRight,
 } from "lucide-react";
 import Wrapper from "../../../components/Wrapper";
 import Avatar from "./componets/Avatar";
@@ -32,7 +33,7 @@ function ProfilePage() {
           to="/profile/detail"
           className="rounded-xl bg-white/10 px-3 py-2 text-sm hover:bg-white/15"
         >
-          ›
+          <ChevronRight />
         </Link>
       </div>
 
@@ -66,32 +67,38 @@ function ProfilePage() {
         <Tile
           icon={<Users className="h-5 w-5" />}
           title="Referral Team"
-          to="/profile/team"
+          to="/refferal"
+          right={<ChevronRight />}
         />
         <Tile
           icon={<Calendar className="h-5 w-5" />}
           title="Security Setting"
           to="/profile/security"
+          right={<ChevronRight />}
         />
         <Tile
           icon={<Camera className="h-5 w-5" />}
           title="KYC Verification"
-          to="/profile/edit"
+          to="/profile/kyc"
+          right={<ChevronRight />}
         />
         <Tile
           icon={<Bell className="h-5 w-5" />}
           title="Notification"
-          to="/profile/notifications"
+          to="/profile/notification"
+          right={<ChevronRight />}
         />
         <Tile
           icon={<Globe className="h-5 w-5" />}
           title="Language"
           to="/profile/language"
+          right={<ChevronRight />}
         />
         <Tile
           icon={<LogOut className="h-5 w-5" />}
           title="Sign out"
           onClick={() => setShowSignout(true)}
+          right={<ChevronRight />}
         />
       </div>
 

@@ -24,7 +24,7 @@ export default function SignOutModal({
           </button>
           <button
             onClick={onConfirm}
-            className="rounded-lg bg-red-500 px-4 py-2 hover:bg-red-400"
+            className="rounded-lg bg-[#F5C242] px-4 py-2 hover:bg-yellow-400"
           >
             Sign out
           </button>
