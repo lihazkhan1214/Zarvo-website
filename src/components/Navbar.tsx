@@ -9,6 +9,7 @@ const links = [
   { name: "Analytics", path: "/analytics" },
   { name: "Partner", path: "/partner" },
   { name: "Profile", path: "/profile" },
+  { name: "About", path: "/about" },
 ];
 
 const linkBase = "px-3 py-2 rounded-md text-sm font-medium transition-colors";

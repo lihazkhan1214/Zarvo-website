@@ -23,6 +23,12 @@ import LanguageSettingPageWrapper from "../pages/LanguageSettingPageWrapper";
 import NotificationSettingPagewrapper from "../pages/NotificationSettingPagewrapper";
 import KYCStartPageWrapper from "../pages/KYCStartPageWrapper";
 import AboutPageWrapper from "../pages/AboutPageWrapper";
+import StartPage from "../modules/auth/StartPage";
+import LoginPage from "../modules/auth/LoginPage";
+import SignupPage from "../modules/auth/SignupPage";
+import ForgotPasswordPage from "../modules/auth/ForgotPasswordPage";
+import VerifyOtpPage from "../modules/auth/VerifyOtpPage";
+import ResetPasswordPage from "../modules/auth/ResetPasswordPage";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -67,6 +73,13 @@ const AppRoutes: React.FC = () => {
             />
             <Route path="/profile/kyc" element={<KYCStartPageWrapper />} />
             <Route path="/about" element={<AboutPageWrapper />} />
+
+            <Route path="/auth" element={<StartPage />} />
+            <Route path="/auth/login" element={<LoginPage />} />
+            <Route path="/auth/signup" element={<SignupPage />} />
+            <Route path="/auth/forgot" element={<ForgotPasswordPage />} />
+            <Route path="/auth/verify" element={<VerifyOtpPage />} />
+            <Route path="/auth/reset" element={<ResetPasswordPage />} />
           </Route>
         </Route>
       </Routes>
