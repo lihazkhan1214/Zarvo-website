@@ -22,7 +22,7 @@ import ScuritySettingPageWrapper from "../pages/ScuritySettingPageWrapper";
 import LanguageSettingPageWrapper from "../pages/LanguageSettingPageWrapper";
 import NotificationSettingPagewrapper from "../pages/NotificationSettingPagewrapper";
 import KYCStartPageWrapper from "../pages/KYCStartPageWrapper";
-// import KYCSelectDocPageWrapper from "../pages/KYCSelectDocPageWrapper";
+import AboutPageWrapper from "../pages/AboutPageWrapper";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -66,8 +66,7 @@ const AppRoutes: React.FC = () => {
               element={<NotificationSettingPagewrapper />}
             />
             <Route path="/profile/kyc" element={<KYCStartPageWrapper />} />
-
-            {/* <Route path="/dd" element={<KYCSelectDocPageWrapper />} /> */}
+            <Route path="/about" element={<AboutPageWrapper />} />
           </Route>
         </Route>
       </Routes>
