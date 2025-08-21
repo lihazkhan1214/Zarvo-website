@@ -1,10 +1,6 @@
 import React from "react";
 
-type Props = {
-  value: string;
-  length?: number;
-  onChange: (v: string) => void;
-};
+type Props = { value: string; length?: number; onChange: (v: string) => void };
 
 const OtpInput: React.FC<Props> = ({ value, onChange, length = 6 }) => {
   const inputs = React.useRef<Array<HTMLInputElement | null>>([]);
@@ -33,9 +29,9 @@ const OtpInput: React.FC<Props> = ({ value, onChange, length = 6 }) => {
       .slice(0, length);
     if (!text) return;
     e.preventDefault();
-    const filled = (value + " ".repeat(length)).split("");
-    for (let i = 0; i < text.length; i++) filled[i] = text[i];
-    onChange(filled.slice(0, length).join(""));
+    const merged = (value + " ".repeat(length)).split("");
+    for (let i = 0; i < text.length; i++) merged[i] = text[i];
+    onChange(merged.slice(0, length).join(""));
     inputs.current[Math.min(text.length, length - 1)]?.focus();
   };
 
@@ -44,10 +40,9 @@ const OtpInput: React.FC<Props> = ({ value, onChange, length = 6 }) => {
       {Array.from({ length }).map((_, i) => (
         <input
           key={i}
-          // FIX: return void from ref callback
-          ref={(el: HTMLInputElement | null) => {
+          ref={(el) => {
             inputs.current[i] = el;
-          }}
+          }} // return void
           value={value[i] || ""}
           onChange={(e) => setVal(i, e.target.value.slice(-1))}
           onKeyDown={(e) => onKeyDown(i, e)}
@@ -62,5 +57,4 @@ const OtpInput: React.FC<Props> = ({ value, onChange, length = 6 }) => {
     </div>
   );
 };
-
 export default OtpInput;
